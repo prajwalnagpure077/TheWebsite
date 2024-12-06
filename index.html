@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta name="google-site-verification" content="KL4CjDs15gPxD8SNC0FBjau2M3UEJuExmdnIwkJ2VE4" />
     <!-- Google tag (gtag.js) -->
@@ -15,13 +14,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/output.css">
-    <title>Document</title>
-    <div class="bg-gray-500 text-6xl text-center text-white font-bold pt-3 pb-5 shadow-xl">
-        Finding Studio
-    </div>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechtag - A VR PvP Arena Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Remove animation and add responsive scaling */
+        .gradient-bg {
+            background: linear-gradient(45deg, #4a90e2, #1c92d2, #2f80ed);
+            background-size: 400% 400%;
+        }
+    </style>
+    </head>
+    
+    <body class="bg-gray-900 text-white font-sans">
+    
+        <!-- Header -->
+        <header class="bg-blue-900 text-white py-4 shadow-lg">
+            <div class="container mx-auto flex justify-between items-center px-4">
+                <div>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold">Mechtag</h1>
+                </div>
+                <nav class="space-x-8 text-lg">
+                    <a href="#home" class="hover:text-blue-500">Home</a>
+                    <a href="#about" class="hover:text-blue-500">About</a>
+                    <a href="#download" class="hover:text-blue-500">Download</a>
+                    <a href="#contact" class="hover:text-blue-500">Contact</a>
+                    <a href="#content-creators" class="hover:text-blue-500">Content Creators</a>
+                    <a href="#press" class="hover:text-blue-500">Press</a>
+                    <a href="#privacy" class="hover:text-blue-500">Privacy Policy</a>
+                </nav>
+            </div>
+        </header>
+    
+        <!-- Hero Section -->
+        <section id="home" class="relative w-full h-screen bg-cover bg-center gradient-bg">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative z-10 container mx-auto px-4 py-32 text-center">
+                <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-4">Mechtag</h1>
+                <p class="text-lg sm:text-xl mb-8">A VR PvP arena-based game where you fight, survive, and dominate in an
+                    immersive virtual world.</p>
+                <div class="space-x-4">
+                    <a href="#download"
+                        class="inline-block px-6 py-3 text-lg font-semibold text-gray-900 bg-blue-500 rounded-full shadow-lg hover:bg-blue-600">Download</a>
+                    <a href="#about"
+                        class="inline-block px-6 py-3 text-lg font-semibold text-blue-500 border-2 border-blue-500 rounded-full hover:bg-blue-500 hover:text-gray-900">Learn
+                        More</a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gradient-to-r from-blue-700 to-blue-900">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-blue-500 mb-12">About Mechtag</h2>
+                <p class="text-lg sm:text-xl text-gray-400 mb-8 max-w-3xl mx-auto">In *Mechtag*, you engage in intense PvP
+                    battles in futuristic arenas. Choose your mechs, customize your loadouts, and fight to be the last one
+                    standing!</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 px-4">
+                    <div class="bg-blue-800 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-blue-500 mb-4">Epic PvP Combat</h3>
+                        <p class="text-lg text-gray-400">Join the fight in dynamic arenas, where every match brings a new
+                            challenge. Fight with friends or go solo for supremacy.</p>
+                    </div>
+                    <div class="bg-blue-800 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-blue-500 mb-4">Customizable Mechs</h3>
+                        <p class="text-lg text-gray-400">Choose from a variety of mechs with customizable weapons, armor,
+                            and abilities to match your playstyle.</p>
+                    </div>
+                    <div class="bg-blue-800 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-blue-500 mb-4">Strategic Gameplay</h3>
+                        <p class="text-lg text-gray-400">Use your skills and strategy to outsmart your opponents and
+                            dominate the arena in both team-based and solo modes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Game Features Section -->
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-blue-500 mb-12">Game Features</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 px-4">
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-blue-500 mb-4">Intense Action</h3>
+                        <p class="text-lg text-gray-400">Fast-paced combat that will keep you on the edge of your seat.
+                            Battle against players in epic VR arenas!</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-blue-500 mb-4">Futuristic Arenas</h3>
+                        <p class="text-lg text-gray-400">Battle in sleek, futuristic arenas with changing environments,
+                            obstacles, and tactical gameplay.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-blue-500 mb-4">Team & Solo Modes</h3>
+                        <p class="text-lg text-gray-400">Play in team-based or solo modes, and test your strategy and skill
+                            against others in VR.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Media Section -->
+        <section class="py-20 bg-blue-900">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-blue-500 mb-12">Media & More</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 px-4">
+                    <div>
+                        <img src="your-photo1.jpg" alt="Game Screenshot" class="w-full rounded-lg shadow-lg mb-4">
+                        <p class="text-lg text-gray-400">"Battle your way to victory!"</p>
+                    </div>
+                    <div>
+                        <img src="your-photo2.jpg" alt="Game Screenshot" class="w-full rounded-lg shadow-lg mb-4">
+                        <p class="text-lg text-gray-400">"Customize your mechs to dominate the field!"</p>
+                    </div>
+                    <div>
+                        <img src="your-photo3.jpg" alt="Game Screenshot" class="w-full rounded-lg shadow-lg mb-4">
+                        <p class="text-lg text-gray-400">"Engage in thrilling VR combat with friends!"</p>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <video class="w-full rounded-lg shadow-lg" controls>
+                        <source src="your-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Download Section -->
+        <section id="download" class="py-20 bg-gray-900 text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-blue-500 mb-12">Get Mechtag Today!</h2>
+                <p class="text-lg sm:text-xl text-gray-400 mb-8">Download *Mechtag* now and enter the battle in virtual
+                    reality!</p>
+                <div class="space-x-4">
+                    <a href="#"
+                        class="inline-block px-8 py-4 text-xl font-semibold text-gray-900 bg-blue-500 rounded-full shadow-lg hover:bg-blue-600">Download
+                        Now</a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-blue-900 text-center">
+            <div class="container mx-auto">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-blue-500 mb-12">Contact Us</h2>
+                <p class="text-lg sm:text-xl text-gray-400 mb-8">For any inquiries, feel free to reach out to us via email.
+                </p>
+                <a href="mailto:support@findingstudio.com"
+                    class="inline-block px-8 py-4 text-xl font-semibold text-gray-900 bg-blue-500 rounded-full shadow-lg hover:bg-blue-600">Contact
+                    Support</a>
+            </div>
+        </section>
+    
+        <!-- Privacy Policy Page -->
+        <section id="privacy" class="py-20 bg-blue-800 text-center">
+            <div class="container mx-auto">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-blue-500 mb-12">Privacy Policy</h2>
+                <p class="text-lg sm:text-xl text-gray-400 mb-8 max-w-3xl mx-auto">We value your privacy. Please read our
+                    privacy policy to understand how we collect and protect your data.</p>
+                <a href="privacy-policy.html"
+                    class="inline-block px-8 py-4 text-xl font-semibold text-gray-900 bg-blue-500 rounded-full shadow-lg hover:bg-blue-600">Read
+                    Privacy Policy</a>
+            </div>
+    </section>
 
-<body class="bg-gray-600">
 </body>
-
 </html>
