@@ -23,17 +23,15 @@
     <meta name="description" content="Simple landind page" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <link rel="icon" type="image/png" href="images/favicon.png">
     <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Denk+One&display=swap" rel="stylesheet">
+    <link href="font/DenkOne-Regular.ttf" rel="stylesheet">
 </head>
 
 <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
-    <div id="headerBuilder"></div>
-    <script src="header.js" async></script>
+    <div id="headerBuilder">
+        <nav id="header" class="fixed w-full z-30 pt-4 text-white bg-black h-full"></nav>
+    </div>
+    <script src="header.js"></script>
 </body>
-
 </html>
