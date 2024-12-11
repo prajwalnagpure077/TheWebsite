@@ -13,6 +13,10 @@
 font-display: swap;
 
 }
+.grayColor {
+  background-color: hsl(0, 0%, 50%);
+}
+
 
 .titleElement {
 @apply inline-block no-underline  text-white py-2 px-4 pb-0 w-full lg:w-auto max-lg:text-right;
