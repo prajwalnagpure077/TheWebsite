@@ -5,74 +5,103 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Finding Studio | Gems of Games</title>
+    <style>
+      /* Navbar CSS */
+      #navbarForDesktop {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #343a40;
+      }
+      .navbar {
+        padding: 1rem;
+      }
+      .navbar-brand img {
+        height: 50px;
+        width: auto;
+      }
+      .navbar-nav .nav-item .nav-link {
+        margin: 0 0.5rem;
+        padding: 0.5rem 1rem;
+      }
+      .navbar-toggler {
+        border: none;
+      }
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+      @media (max-width: 992px) {
+        .navbar-nav {
+          text-align: center;
+        }
+        .navbar-nav .nav-item {
+          margin-bottom: 0.5rem;
+        }
+      }
+      body {
+        padding-top: 70px; /* Adjust based on navbar height */
+      }
+
+      /* Carousel images CSS */
+      .carousel-item img {
+        height: 500px;
+        object-fit: cover;
+      }
+
+      /* News images CSS */
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+    </style>
   </head>
 
   <body>
     <!-- navbar start here  -->
     <div class="container-fluid p-0" id="navbarForDesktop">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img
-                src="/finding_Studio_logo.webp"
-                alt=""
-                height="50px"
-                width="100px"
-              />
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="collapse navbar-collapse d-flex justify-content-between"
-              id="navbarNav"
-            >
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a
-                    class="nav-link mx-2 text-light active"
-                    aria-current="page"
-                    href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-2 text-light" href="#">Games</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-2 text-light" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-2 text-light" href="#">Contact</a>
-                </li>
-              </ul>
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link mx-2 text-light" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-2 text-light" href="#">Games</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-2 text-light" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-2 text-light" href="#">Contact</a>
-                </li>
-              </ul>
-            </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="/finding_Studio_logo.webp"
+              alt="Finding Studio Logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link mx-2 text-light active"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-light" href="#">Games</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-light" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-light" href="#">Contact</a>
+              </li>
+            </ul>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </div>
     <!-- end navbar  -->
     <!-- main section start here  -->
@@ -95,7 +124,7 @@
                   </p>
                 </div>
                 <div class="mainButton">
-                  <button class="btn btn-primary rounded-pill">
+                  <button class="btn btn-primary rounded-pill"></button>
                     Watch Video
                   </button>
                 </div>
@@ -106,6 +135,137 @@
       </main>
     </section>
     <!-- end main  -->
+
+    <!-- Add a carousel for featured games -->
+    <div
+      id="featuredGamesCarousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/game.jpg" class="d-block w-100" alt="Game 1" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Game 1</h5>
+            <p>Experience the thrill of Game 1.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/game2.jpg" class="d-block w-100" alt="Game 2" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Game 2</h5>
+            <p>Adventure awaits in Game 2.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/game3.jpg" class="d-block w-100" alt="Game 3" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Game 3</h5>
+            <p>Join the battle in Game 3.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#featuredGamesCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#featuredGamesCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Add a section for latest news -->
+    <section class="bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Latest News</h2>
+            <p>Stay updated with the latest news from Finding Studio.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img src="/news.jpg" class="card-img-top" alt="News 1" />
+              <div class="card-body">
+                <h5 class="card-title">News Title 1</h5>
+                <p class="card-text">Brief description of the news article.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img src="/news.jpg" class="card-img-top" alt="News 2" />
+              <div class="card-body">
+                <h5 class="card-title">News Title 2</h5>
+                <p class="card-text">Brief description of the news article.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img src="/news.jpg" class="card-img-top" alt="News 3" />
+              <div class="card-body">
+                <h5 class="card-title">News Title 3</h5>
+                <p class="card-text">Brief description of the news article.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add a contact form -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you. Get in touch with us!</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="bg-dark text-light py-4">
       <div class="container">
