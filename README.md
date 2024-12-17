@@ -34,6 +34,10 @@ To start the development server, run:
 npm run dev
 ```
 
+### Live Preview
+
+The website is live on [http://localhost:5173/](http://localhost:5173/)
+
 ### Building the Project
 
 To build the project for production, run:
