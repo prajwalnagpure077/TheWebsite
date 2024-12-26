@@ -29,10 +29,10 @@
     <!-- Navbar -->
     <nav class="bg-white shadow-md">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-800">Supercell</a>
+            <a href="#" class="text-2xl font-bold text-gray-800"><img src="images/finding Studio logo.webp"
+                    alt="finding Studio logo"></a>
             <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
@@ -40,27 +40,41 @@
                 <a href="#games" class="text-gray-600 hover:text-gray-800">Games</a>
                 <a href="#news" class="text-gray-600 hover:text-gray-800">News</a>
                 <a href="#about" class="text-gray-600 hover:text-gray-800">About</a>
-                <a href="#careers" class="text-gray-600 hover:text-gray-800">Careers</a>
+                <a href="#store" class="text-gray-600 hover:text-gray-800">Store</a>
+                <a href="#creator" class="text-gray-600 hover:text-gray-800">Creator</a>
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 bg-gray-100 px-6 py-4">
             <a href="#games" class="text-gray-600 hover:text-gray-800">Games</a>
             <a href="#news" class="text-gray-600 hover:text-gray-800">News</a>
             <a href="#about" class="text-gray-600 hover:text-gray-800">About</a>
-            <a href="#careers" class="text-gray-600 hover:text-gray-800">Careers</a>
+            <a href="#store" class="text-gray-600 hover:text-gray-800">Store</a>
+            <a href="#creator" class="text-gray-600 hover:text-gray-800">Creator</a>
         </div>
     </nav>
-    
+
+    <!-- Social Media Bar -->
+    <div class="bg-gray-800 text-gray-400 py-2">
+        <div class="container mx-auto flex justify-center space-x-4">
+            <a href="#" class="hover:text-white"><img src="images/Discord.webp" alt="finding studio discord"><i
+                    class="fab"></i></a>
+            <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-white"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="bg-cover bg-center h-screen" style="background-image: url('https://via.placeholder.com/1920x1080');">
         <div class="container mx-auto px-6 h-full flex flex-col justify-center items-center text-center">
             <h1 class="text-4xl md:text-6xl font-bold text-white">Welcome to Supercell</h1>
             <p class="mt-4 text-lg text-gray-200">Creating unforgettable games for everyone.</p>
-            <a href="#games" class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700">Explore
-                Our Games</a>
+            <a href="#games" class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700">Explore Our
+                Games</a>
         </div>
     </section>
-    
+
     <!-- News Section -->
     <section id="news" class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
@@ -87,21 +101,21 @@
                         <p class="mt-2 text-gray-600">Celebrating our amazing players and their stories.</p>
                     </div>
                 </div>
-                </div>
-                </div>
-                </section>
-                
-                <!-- Footer -->
-                <footer class="bg-gray-800 py-10">
-                    <div class="container mx-auto px-6 text-center text-gray-400">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div>
-                                <h3 class="text-lg font-bold text-white">Company</h3>
-                                <ul class="mt-4 space-y-2">
-                                    <li><a href="#about" class="hover:text-white">About Us</a></li>
-                                    <li><a href="#careers" class="hover:text-white">Careers</a></li>
-                                    <li><a href="#contact" class="hover:text-white">Contact</a></li>
-                                </ul>
+            </div>
+            </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer class="bg-gray-800 py-10">
+                <div class="container mx-auto px-6 text-center text-gray-400">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Company</h3>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="#about" class="hover:text-white">About Us</a></li>
+                                <li><a href="#careers" class="hover:text-white">Careers</a></li>
+                                <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                            </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold text-white">Legal</h3>
@@ -113,24 +127,25 @@
                 <div>
                     <h3 class="text-lg font-bold text-white">Follow Us</h3>
                     <div class="flex justify-center mt-4 space-x-4">
-                        <a href="#" class="hover:text-white">Facebook</a>
-                        <a href="#" class="hover:text-white">Twitter</a>
-                        <a href="#" class="hover:text-white">Instagram</a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                </div>
-                <p class="mt-6">&copy; 2024 Supercell. All rights reserved.</p>
-                </div>
-                </footer>
-                
-                <script>
-            const menuBtn = document.getElementById('menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
+            </div>
+            <p class="mt-6">&copy; 2024 Supercell. All rights reserved.</p>
+            </div>
+            </footer>
+            
+            <script>
+                const menuBtn = document.getElementById('menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
 
             menuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
         </script>
 </body>
-
 </html>
