@@ -27,8 +27,7 @@
 <body class="bg-gray-900 text-white font-sans">
     <div class="container mx-auto px-4">
         <!-- Hero Section -->
-        <header class="relative w-full h-screen bg-cover bg-center"
-            style="background-image: url('your-cover-photo.jpg');">
+        <header class="relative w-full h-screen bg-cover bg-center" style="background-image: url('your-cover-photo.jpg');">
             <!-- Buttons in Hero Section -->
             <div class="absolute top-4 left-4 z-10">
                 <button id="newsletterButton"
@@ -37,23 +36,17 @@
             <div class="absolute top-4 right-4 flex space-x-4 z-10">
                 <a href="#" class="bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg text-white shadow-lg">Discord</a>
                 <a href="#" class="bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg text-white shadow-lg">Shop</a>
-                <a href="#" class="bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg text-white shadow-lg">Press
-                    Kit</a>
+                <a href="#" class="bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg text-white shadow-lg">Press Kit</a>
             </div>
             <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center">
                 <h1 class="text-5xl sm:text-7xl font-bold text-white mb-4">VR Game Title</h1>
-                <p class="text-lg sm:text-xl text-gray-300 mb-8">Experience the ultimate VR adventure like never before.
-                </p>
-                <a href="#"
-                    class="bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg text-white text-lg shadow-lg mb-4">Play
-                    Now</a>
-                <button id="playTrailer"
-                    class="bg-gray-700 hover:bg-gray-600 py-3 px-6 rounded-lg text-white text-lg shadow-lg">Play
+                <p class="text-lg sm:text-xl text-gray-300 mb-8">Experience the ultimate VR adventure like never before.</p>
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg text-white text-lg shadow-lg mb-4">Play Now</a>
+                <button id="playTrailer" class="bg-gray-700 hover:bg-gray-600 py-3 px-6 rounded-lg text-white text-lg shadow-lg">Play
                     Trailer</button>
             </div>
             <!-- Modal for YouTube Video -->
-            <div id="trailerModal"
-                class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-20">
+            <div id="trailerModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-20">
                 <div class="relative w-11/12 sm:w-3/4 lg:w-1/2 bg-gray-900 rounded-lg shadow-lg">
                     <button id="closeModal"
                         class="absolute top-2 right-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full w-8 h-8 flex items-center justify-center">&times;</button>
@@ -64,8 +57,7 @@
                 </div>
             </div>
             <!-- Modal for Newsletter -->
-            <div id="newsletterModal"
-                class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-20">
+            <div id="newsletterModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-20">
                 <div class="relative w-11/12 sm:w-3/4 lg:w-1/2 bg-gray-900 rounded-lg shadow-lg p-6">
                     <button id="closeNewsletterModal"
                         class="absolute top-2 right-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full w-8 h-8 flex items-center justify-center">&times;</button>
@@ -73,8 +65,7 @@
                     <form id="newsletterForm" class="flex flex-col items-center">
                         <input type="email" id="emailInput" placeholder="Enter your email"
                             class="w-full sm:w-3/4 p-3 rounded-lg mb-4 text-black">
-                        <button type="submit"
-                            class="bg-blue-600 hover:bg-blue-700 py-2 px-6 rounded-lg text-white shadow-lg">Submit</button>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 py-2 px-6 rounded-lg text-white shadow-lg">Submit</button>
                     </form>
                 </div>
             </div>
@@ -111,47 +102,55 @@
                 <img src="media3.jpg" alt="Media 3" class="rounded-lg shadow-lg">
             </div>
         </section>
-<!-- Call to Action -->
-<section class="py-16 text-center">
-    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get Started Today</h2>
-    <p class="text-lg text-gray-400 mb-8">Join the adventure and explore the world of VR gaming.</p>
-    <a href="#" class="bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg text-white text-lg shadow-lg">Play Now</a>
-</section>
-</div>
 
-<script>
-    const playTrailerButton = document.getElementById('playTrailer');
-    const trailerModal = document.getElementById('trailerModal');
-    const closeModalButton = document.getElementById('closeModal');
+        <!-- Call to Action -->
+        <section class="py-16 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get Started Today</h2>
+            <p class="text-lg text-gray-400 mb-8">Join the adventure and explore the world of VR gaming.</p>
+            <a href="#" class="bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg text-white text-lg shadow-lg">Play Now</a>
+        </section>
+<!-- Footer -->
+<footer class="bg-gray-800 py-4">
+    <div class="container mx-auto text-center">
+        <a href="#" class="text-gray-400 hover:text-white mx-4">Privacy Policy</a>
+        <a href="#" class="text-gray-400 hover:text-white mx-4">Terms of Service</a>
+    </div>
+</footer>
+    </div>
 
-    playTrailerButton.addEventListener('click', () => {
-        trailerModal.classList.remove('hidden');
-    });
+    <script>
+        const playTrailerButton = document.getElementById('playTrailer');
+        const trailerModal = document.getElementById('trailerModal');
+        const closeModalButton = document.getElementById('closeModal');
 
-    closeModalButton.addEventListener('click', () => {
-        trailerModal.classList.add('hidden');
-    });
+            playTrailerButton.addEventListener('click', () => {
+                trailerModal.classList.remove('hidden');
+            });
 
-    const newsletterButton = document.getElementById('newsletterButton');
-    const newsletterModal = document.getElementById('newsletterModal');
-    const closeNewsletterModal = document.getElementById('closeNewsletterModal');
+            closeModalButton.addEventListener('click', () => {
+                trailerModal.classList.add('hidden');
+            });
 
-    newsletterButton.addEventListener('click', () => {
-        newsletterModal.classList.remove('hidden');
-    });
+            const newsletterButton = document.getElementById('newsletterButton');
+            const newsletterModal = document.getElementById('newsletterModal');
+            const closeNewsletterModal = document.getElementById('closeNewsletterModal');
 
-    closeNewsletterModal.addEventListener('click', () => {
-        newsletterModal.classList.add('hidden');
-    });
+            newsletterButton.addEventListener('click', () => {
+                newsletterModal.classList.remove('hidden');
+            });
 
-    const newsletterForm = document.getElementById('newsletterForm');
-    newsletterForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const emailInput = document.getElementById('emailInput');
-        alert(`Thank you for subscribing with email: ${emailInput.value}`);
-        emailInput.value = '';
-        newsletterModal.classList.add('hidden');
-    });
-</script>
+            closeNewsletterModal.addEventListener('click', () => {
+                newsletterModal.classList.add('hidden');
+            });
+
+            const newsletterForm = document.getElementById('newsletterForm');
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const emailInput = document.getElementById('emailInput');
+                alert(`Thank you for subscribing with email: ${emailInput.value}`);
+                emailInput.value = '';
+                newsletterModal.classList.add('hidden');
+            });
+        </script>
 </body>
 </html>
