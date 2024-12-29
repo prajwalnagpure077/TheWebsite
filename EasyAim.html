@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Easy Aim VR</title>
+
+    <meta name="google-site-verification" content="KL4CjDs15gPxD8SNC0FBjau2M3UEJuExmdnIwkJ2VE4" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GK2V4S47S3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GK2V4S47S3');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/output.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Easy Aim VR" />
+    <meta name="keywords" content="Easy Aim, Easy Aim VR, quest, meta" />
+    <meta name="author" content="Prajwal" />
+    <link rel="icon" type="image/png" href="images/finding Studio logo favicon.png">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <div class="container mx-auto" style="width:100%;max-width:100000px;">
+        <!-- Hero Section -->
+        <header class="relative w-full h-screen bg-cover bg-center"
+            style="background-image: url('images/Screenshots/cover.jpg');">
+            <!-- Buttons in Hero Section -->
+            <div class="absolute top-4 left-4 z-10">
+                <button id="newsletterButton"
+                    class="py-2 px-2 text-white"><img src="images/news.webp" alt="finding studio news"></button>
+            </div>
+            <div class="absolute top-4 right-4 flex space-x-4 z-10">
+                <a href="#" class="py-2 px-2 text-white "><img src="images/Discord.webp" alt="finding studio discord"></a>
+                <a href="#" class="py-2 px-2 text-white "><img src="images/Shop.webp" alt="finding studio shop"></a>
+                <a href="#" class="py-2 px-2 text-white ">Press Kit</a>
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center">
+                <h1 class="text-5xl sm:text-7xl font-bold text-white mb-4">VR Game Title</h1>
+                <p class="text-lg sm:text-xl text-gray-300 mb-8">Experience the ultimate VR adventure like never before.</p>
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg text-white text-lg shadow-lg mb-4">Play Now</a>
+                <button id="playTrailer" class="bg-gray-700 hover:bg-gray-600 py-3 px-6 rounded-lg text-white text-lg shadow-lg">Play
+                    Trailer</button>
+            </div>
+            <!-- Modal for YouTube Video -->
+            <div id="trailerModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-20">
+                <div class="relative w-11/12 sm:w-3/4 lg:w-1/2 bg-gray-900 rounded-lg shadow-lg">
+                    <button id="closeModal"
+                        class="absolute top-2 right-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full w-8 h-8 flex items-center justify-center">&times;</button>
+                    <iframe class="w-full aspect-video rounded-b-lg" src="https://www.youtube.com/embed/oAf5M4Q0Pu8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- Modal for Newsletter -->
+            <div id="newsletterModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-20">
+                <div class="relative w-11/12 sm:w-3/4 lg:w-1/2 bg-gray-900 rounded-lg shadow-lg p-6">
+                    <button id="closeNewsletterModal"
+                        class="absolute top-2 right-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full w-8 h-8 flex items-center justify-center">&times;</button>
+                    <h2 class="text-2xl font-bold text-center mb-4">Subscribe to our Newsletter</h2>
+                    <form id="newsletterForm" class="flex flex-col items-center">
+                        <input type="email" id="emailInput" placeholder="Enter your email"
+                            class="w-full sm:w-3/4 p-3 rounded-lg mb-4 text-black">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 py-2 px-6 rounded-lg text-white shadow-lg">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <!-- Features Section -->
+        <section class="py-16 pl-10 pr-10">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">Features</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <span class="material-symbols-outlined text-6xl text-blue-500 mb-4">visibility</span>
+                    <h3 class="text-xl font-bold mb-2">Immersive VR</h3>
+                    <p class="text-gray-400">Dive into a fully immersive virtual reality world.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <span class="material-symbols-outlined text-6xl text-green-500 mb-4">powers</span>
+                    <h3 class="text-xl font-bold mb-2">Power-ups & Abilities</h3>
+                    <p class="text-gray-400">competitive shooting battles with friends and players from around the world in real-time
+                        multiplayer matches.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <span class="material-symbols-outlined text-6xl text-red-500 mb-4">Gameplay</span>
+                    <br>
+                    <h3 class="text-xl font-bold mb-2">Fun, Fast-Paced Action</h3>
+                    <p class="text-gray-400">the gameplay is designed to be fun and fast-paced, keeping you on the edge of your seat!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Section -->
+        <section class="py-16 bg-gray-800">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">Media</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pl-10 pr-10">
+                <img src="images/Screenshots/1.jpg" alt="Media 1" class="rounded-lg shadow-lg">
+                <img src="images/Screenshots/2.jpg" alt="Media 2" class="rounded-lg shadow-lg">
+                <img src="images/Screenshots/3.jpg" alt="Media 3" class="rounded-lg shadow-lg">
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-16 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get Started Today</h2>
+            <p class="text-lg text-gray-400 mb-8">Join the adventure and explore the world of VR gaming.</p>
+            <a href="#" class="bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg text-white text-lg shadow-lg">Play Now</a>
+        </section>
+<!-- Footer -->
+<footer class="bg-gray-800 py-4">
+    <div class="container mx-auto text-center">
+        <a href="#" class="text-gray-400 hover:text-white mx-4">Privacy Policy</a>
+        <a href="#" class="text-gray-400 hover:text-white mx-4">Terms of Service</a>
+    </div>
+</footer>
+    </div>
+
+    <script>
+        const playTrailerButton = document.getElementById('playTrailer');
+        const trailerModal = document.getElementById('trailerModal');
+        const closeModalButton = document.getElementById('closeModal');
+
+            playTrailerButton.addEventListener('click', () => {
+                trailerModal.classList.remove('hidden');
+            });
+
+            closeModalButton.addEventListener('click', () => {
+                trailerModal.classList.add('hidden');
+            });
+
+            const newsletterButton = document.getElementById('newsletterButton');
+            const newsletterModal = document.getElementById('newsletterModal');
+            const closeNewsletterModal = document.getElementById('closeNewsletterModal');
+
+            newsletterButton.addEventListener('click', () => {
+                newsletterModal.classList.remove('hidden');
+            });
+
+            closeNewsletterModal.addEventListener('click', () => {
+                newsletterModal.classList.add('hidden');
+            });
+
+            const newsletterForm = document.getElementById('newsletterForm');
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const emailInput = document.getElementById('emailInput');
+                alert(`Thank you for subscribing with email: ${emailInput.value}`);
+                emailInput.value = '';
+                newsletterModal.classList.add('hidden');
+            });
+        </script>
+</body>
+</html>
