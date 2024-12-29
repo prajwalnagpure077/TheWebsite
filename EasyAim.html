@@ -23,61 +23,135 @@
     <meta name="keywords" content="Easy Aim, Easy Aim VR, quest, meta" />
     <meta name="author" content="Prajwal" />
     <link rel="icon" type="image/png" href="images/finding Studio logo favicon.png">
-    <style>
-        body {
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .social-buttons a {
-            display: inline-block;
-            margin: 0.5rem;
-        }
-    </style>
 </head>
+<body class="bg-gray-900 text-white font-sans">
+    <div class="container mx-auto px-4">
+        <!-- Hero Section -->
+        <header class="relative w-full h-screen bg-cover bg-center"
+            style="background-image: url('your-cover-photo.jpg');">
+            <!-- Buttons in Hero Section -->
+            <div class="absolute top-4 left-4 z-10">
+                <button id="newsletterButton"
+                    class="bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg text-white shadow-lg">Newsletter</button>
+            </div>
+            <div class="absolute top-4 right-4 flex space-x-4 z-10">
+                <a href="#" class="bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg text-white shadow-lg">Discord</a>
+                <a href="#" class="bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg text-white shadow-lg">Shop</a>
+                <a href="#" class="bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg text-white shadow-lg">Press
+                    Kit</a>
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center">
+                <h1 class="text-5xl sm:text-7xl font-bold text-white mb-4">VR Game Title</h1>
+                <p class="text-lg sm:text-xl text-gray-300 mb-8">Experience the ultimate VR adventure like never before.
+                </p>
+                <a href="#"
+                    class="bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg text-white text-lg shadow-lg mb-4">Play
+                    Now</a>
+                <button id="playTrailer"
+                    class="bg-gray-700 hover:bg-gray-600 py-3 px-6 rounded-lg text-white text-lg shadow-lg">Play
+                    Trailer</button>
+            </div>
+            <!-- Modal for YouTube Video -->
+            <div id="trailerModal"
+                class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-20">
+                <div class="relative w-11/12 sm:w-3/4 lg:w-1/2 bg-gray-900 rounded-lg shadow-lg">
+                    <button id="closeModal"
+                        class="absolute top-2 right-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full w-8 h-8 flex items-center justify-center">&times;</button>
+                    <iframe class="w-full aspect-video rounded-b-lg" src="https://www.youtube.com/embed/oAf5M4Q0Pu8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- Modal for Newsletter -->
+            <div id="newsletterModal"
+                class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-20">
+                <div class="relative w-11/12 sm:w-3/4 lg:w-1/2 bg-gray-900 rounded-lg shadow-lg p-6">
+                    <button id="closeNewsletterModal"
+                        class="absolute top-2 right-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full w-8 h-8 flex items-center justify-center">&times;</button>
+                    <h2 class="text-2xl font-bold text-center mb-4">Subscribe to our Newsletter</h2>
+                    <form id="newsletterForm" class="flex flex-col items-center">
+                        <input type="email" id="emailInput" placeholder="Enter your email"
+                            class="w-full sm:w-3/4 p-3 rounded-lg mb-4 text-black">
+                        <button type="submit"
+                            class="bg-blue-600 hover:bg-blue-700 py-2 px-6 rounded-lg text-white shadow-lg">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </header>
 
-<body class="bg-gray-900 text-white">
-    <header class="bg-gray-800 p-4 text-center">
-        <h1 class="text-2xl md:text-3xl font-bold">Easy Aim VR</h1>
-        <nav class="mt-4">
-            <a href="#discord" class="text-blue-400 hover:underline mx-1 md:mx-2">Discord</a>
-            <a href="#shop" class="text-blue-400 hover:underline mx-1 md:mx-2">Shop</a>
-            <a href="#youtube" class="text-blue-400 hover:underline mx-1 md:mx-2">YouTube</a>
-            <a href="#press-kit" class="text-blue-400 hover:underline mx-1 md:mx-2">Press Kit</a>
-        </nav>
-    </header>
+        <!-- Features Section -->
+        <section class="py-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">Features</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <span class="material-symbols-outlined text-6xl text-blue-500 mb-4">visibility</span>
+                    <h3 class="text-xl font-bold mb-2">Immersive VR</h3>
+                    <p class="text-gray-400">Dive into a fully immersive virtual reality world.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <span class="material-symbols-outlined text-6xl text-green-500 mb-4">group</span>
+                    <h3 class="text-xl font-bold mb-2">Multiplayer</h3>
+                    <p class="text-gray-400">Team up with friends for an unforgettable experience.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <span class="material-symbols-outlined text-6xl text-red-500 mb-4">gamepad</span>
+                    <h3 class="text-xl font-bold mb-2">Engaging Gameplay</h3>
+                    <p class="text-gray-400">Enjoy dynamic and thrilling gameplay.</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="relative h-full">
-        <img src="images/easyaim-cover-image.webp" alt="VR Game Cover" class="w-full h-full object-cover">
-        <div class="absolute inset-0 flex flex-col items-center justify-center space-y-4 z-10 mt-48"
-            style="align-self: self-start;">
-            <button onclick="location.href='https://www.youtube.com/watch?v=trailer'"
-                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded text-sm md:text-lg">▶
-                Watch Trailer</button>
-            <button onclick="location.href='https://www.oculus.com/quest'"
-                class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded text-sm md:text-lg">Play
-                on Quest</button>
-        </div>
-    </div>
+        <!-- Media Section -->
+        <section class="py-16 bg-gray-800">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">Media</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <img src="media1.jpg" alt="Media 1" class="rounded-lg shadow-lg">
+                <img src="media2.jpg" alt="Media 2" class="rounded-lg shadow-lg">
+                <img src="media3.jpg" alt="Media 3" class="rounded-lg shadow-lg">
+            </div>
+        </section>
+<!-- Call to Action -->
+<section class="py-16 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get Started Today</h2>
+    <p class="text-lg text-gray-400 mb-8">Join the adventure and explore the world of VR gaming.</p>
+    <a href="#" class="bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg text-white text-lg shadow-lg">Play Now</a>
+</section>
+</div>
 
-    <section id="social" class="absolute bottom-0 left-0 right-0 bg-gray-800 text-center py-4 z-0">
-        <div class="social-buttons">
-            <a href="https://discord.com/" id="discord"
-                class="bg-gray-800 hover:bg-blue-500 text-white py-2 px-3 md:px-4 rounded">Join Discord</a>
-            <a href="https://shop.example.com/" id="shop"
-                class="bg-gray-800 hover:bg-blue-500 text-white py-2 px-3 md:px-4 rounded">Visit Shop</a>
-            <a href="https://www.youtube.com/" id="youtube"
-                class="bg-gray-800 hover:bg-blue-500 text-white py-2 px-3 md:px-4 rounded">Watch on YouTube</a>
-            <a href="https://www.instagram.com/" id="instagram"
-                class="bg-gray-800 hover:bg-blue-500 text-white py-2 px-3 md:px-4 rounded">Follow on Instagram</a>
-            <a href="https://www.tiktok.com/" id="tiktok"
-                class="bg-gray-800 hover:bg-blue-500 text-white py-2 px-3 md:px-4 rounded">Follow on TikTok</a>
-            <a href="https://www.reddit.com/" id="reddit"
-                class="bg-gray-800 hover:bg-blue-500 text-white py-2 px-3 md:px-4 rounded">Join on Reddit</a>
-            <a href="https://example.com/press-kit" id="press-kit"
-                class="bg-gray-800 hover:bg-blue-500 text-white py-2 px-3 md:px-4 rounded">Download Press Kit</a>
-        </div>
-    </section>
+<script>
+    const playTrailerButton = document.getElementById('playTrailer');
+    const trailerModal = document.getElementById('trailerModal');
+    const closeModalButton = document.getElementById('closeModal');
+
+    playTrailerButton.addEventListener('click', () => {
+        trailerModal.classList.remove('hidden');
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        trailerModal.classList.add('hidden');
+    });
+
+    const newsletterButton = document.getElementById('newsletterButton');
+    const newsletterModal = document.getElementById('newsletterModal');
+    const closeNewsletterModal = document.getElementById('closeNewsletterModal');
+
+    newsletterButton.addEventListener('click', () => {
+        newsletterModal.classList.remove('hidden');
+    });
+
+    closeNewsletterModal.addEventListener('click', () => {
+        newsletterModal.classList.add('hidden');
+    });
+
+    const newsletterForm = document.getElementById('newsletterForm');
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailInput = document.getElementById('emailInput');
+        alert(`Thank you for subscribing with email: ${emailInput.value}`);
+        emailInput.value = '';
+        newsletterModal.classList.add('hidden');
+    });
+</script>
 </body>
-
 </html>
