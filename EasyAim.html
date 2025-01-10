@@ -35,14 +35,16 @@
                     class="py-2 px-2 text-white"><img src="images/news.webp" alt="finding studio news"></button>
             </div>
             <div class="absolute top-4 right-4 flex space-x-4 z-10">
-                <a href="#" class="py-2 px-2 text-white "><img src="images/Discord.webp" alt="finding studio discord"></a>
-                <a href="#" class="py-2 px-2 text-white "><img src="images/Shop.webp" alt="finding studio shop"></a>
+                <a href="https://discord.gg/UWrekKzwEN" target="_blank" class="py-2 px-2 text-white "><img src="images/Discord.webp"
+                        alt="finding studio discord"></a>
+                <a href="#" class="hidden py-2 px-2 text-white "><img src="images/Shop.webp" alt="finding studio shop"></a>
                 <a href="#" class="py-2 px-2 text-white ">Press Kit</a>
             </div>
             <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center">
                 <h1 class="text-5xl sm:text-7xl font-bold text-white mb-4">VR Game Title</h1>
                 <p class="text-lg sm:text-xl text-gray-300 mb-8">Experience the ultimate VR adventure like never before.</p>
-                <a href="#" class="bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg text-white text-lg shadow-lg mb-4">Play Now</a>
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg text-white text-lg shadow-lg mb-4">wishlist
+                    Now</a>
                 <button id="playTrailer" class="bg-gray-700 hover:bg-gray-600 py-3 px-6 rounded-lg text-white text-lg shadow-lg">Play
                     Trailer</button>
             </div>
@@ -51,7 +53,7 @@
                 <div class="relative w-11/12 sm:w-3/4 lg:w-1/2 bg-gray-900 rounded-lg shadow-lg">
                     <button id="closeModal"
                         class="absolute top-2 right-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full w-8 h-8 flex items-center justify-center">&times;</button>
-                    <iframe class="w-full aspect-video rounded-b-lg" src="https://www.youtube.com/embed/oAf5M4Q0Pu8"
+                    <iframe id="trailerVideo" class="w-full aspect-video rounded-b-lg" src="https://www.youtube.com/embed/oAf5M4Q0Pu8"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -69,6 +71,18 @@
                         <button type="submit" class="bg-blue-600 hover:bg-blue-700 py-2 px-6 rounded-lg text-white shadow-lg">Submit</button>
                     </form>
                 </div>
+            </div>
+            <!-- social media buttons -->
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 flex space-x-4">
+                <a href="https://www.instagram.com/easyaim0/" target="_blank">
+                    <button class="py-2 px-2 text-white"><img src="images/insta.webp" alt="finding studio instagram"></button>
+                </a>
+                <a href="https://www.youtube.com/@EasyAimVR" target="_blank">
+                    <button class="py-2 px-2 text-white"><img src="images/youtube.webp" alt="finding studio youtube"></button>
+                </a>
+                <a href="https://x.com/EasyAim0" target="_blank">
+                    <button class="py-2 px-2 text-white"><img src="images/x.webp" alt="finding studio x"></button>
+                </a>
             </div>
         </header>
 
@@ -103,20 +117,21 @@
                 <img src="images/Screenshots/1.jpg" alt="Media 1" class="rounded-lg shadow-lg">
                 <img src="images/Screenshots/2.jpg" alt="Media 2" class="rounded-lg shadow-lg">
                 <img src="images/Screenshots/3.jpg" alt="Media 3" class="rounded-lg shadow-lg">
+                <img src="images/Screenshots/4.jpg" alt="Media 3" class="rounded-lg shadow-lg">
             </div>
         </section>
 
         <!-- Call to Action -->
         <section class="py-16 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get Started Today</h2>
-            <p class="text-lg text-gray-400 mb-8">Join the adventure and explore the world of VR gaming.</p>
-            <a href="#" class="bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg text-white text-lg shadow-lg">Play Now</a>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Play Easy Aim now</h2>
+            <p class="text-lg text-gray-400 mb-8">Join the adventure and explore the world of Easy Aim VR.</p>
+            <a href="#" class="bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg text-white text-lg shadow-lg">wishlist Now</a>
         </section>
 <!-- Footer -->
 <footer class="bg-gray-800 py-4">
     <div class="container mx-auto text-center">
-        <a href="#" class="text-gray-400 hover:text-white mx-4">Privacy Policy</a>
-        <a href="#" class="text-gray-400 hover:text-white mx-4">Terms of Service</a>
+        <a href="EasyAim/PrivacyPolicy.html" class="text-gray-400 hover:text-white mx-4">Privacy Policy</a>
+        <a href="EasyAim/TermsOfService.html" class="text-gray-400 hover:text-white mx-4">Terms of Service</a>
     </div>
 </footer>
     </div>
@@ -125,14 +140,18 @@
         const playTrailerButton = document.getElementById('playTrailer');
         const trailerModal = document.getElementById('trailerModal');
         const closeModalButton = document.getElementById('closeModal');
-
+                const trailerVideo = document.getElementById('trailerVideo');
             playTrailerButton.addEventListener('click', () => {
                 trailerModal.classList.remove('hidden');
             });
 
             closeModalButton.addEventListener('click', () => {
                 trailerModal.classList.add('hidden');
+                const videoSrc = trailerVideo.src;
+                trailerVideo.src = ""; // Clear the src to stop the video
+                trailerVideo.src = videoSrc; // Reset the src for future playback
             });
+
 
             const newsletterButton = document.getElementById('newsletterButton');
             const newsletterModal = document.getElementById('newsletterModal');
