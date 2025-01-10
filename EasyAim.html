@@ -52,7 +52,7 @@
                 <div class="relative w-11/12 sm:w-3/4 lg:w-1/2 bg-gray-900 rounded-lg shadow-lg">
                     <button id="closeModal"
                         class="absolute top-2 right-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full w-8 h-8 flex items-center justify-center">&times;</button>
-                    <iframe class="w-full aspect-video rounded-b-lg" src="https://www.youtube.com/embed/oAf5M4Q0Pu8"
+                    <iframe id="trailerVideo" class="w-full aspect-video rounded-b-lg" src="https://www.youtube.com/embed/oAf5M4Q0Pu8"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -139,14 +139,18 @@
         const playTrailerButton = document.getElementById('playTrailer');
         const trailerModal = document.getElementById('trailerModal');
         const closeModalButton = document.getElementById('closeModal');
-
+                const trailerVideo = document.getElementById('trailerVideo');
             playTrailerButton.addEventListener('click', () => {
                 trailerModal.classList.remove('hidden');
             });
 
             closeModalButton.addEventListener('click', () => {
                 trailerModal.classList.add('hidden');
+                const videoSrc = trailerVideo.src;
+                trailerVideo.src = ""; // Clear the src to stop the video
+                trailerVideo.src = videoSrc; // Reset the src for future playback
             });
+
 
             const newsletterButton = document.getElementById('newsletterButton');
             const newsletterModal = document.getElementById('newsletterModal');
