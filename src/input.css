@@ -32,3 +32,7 @@ font-display: swap;
   font-style: normal;
   font-size: large;
 }
+
+.ImgShadow {
+  @apply drop-shadow-[4px_4px_5px_rgba(0,0,0,0.4)];
+}
